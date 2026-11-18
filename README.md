@@ -5,7 +5,7 @@ A minimal end-to-end sales reporting system built across two sessions.
 Python reads a CSV file, computes revenue summaries with pandas, and exports
 the results as JSON files. A static HTML/JS dashboard reads those JSON files
 and renders charts using Chart.js. When you're ready to publish, a Python
-script uploads everything to your web host via SFTP — no backend required.
+script uploads everything to your web host via SFTP.
 
 ---
 
