@@ -1,0 +1,18 @@
+[
+  {
+    "product": "Laptop",
+    "revenue": 50999.49
+  },
+  {
+    "product": "Monitor",
+    "revenue": 21899.27
+  },
+  {
+    "product": "Keyboard",
+    "revenue": 7279.09
+  },
+  {
+    "product": "Mouse",
+    "revenue": 5188.27
+  }
+]

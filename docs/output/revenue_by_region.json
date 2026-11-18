@@ -1,0 +1,18 @@
+[
+  {
+    "region": "North",
+    "revenue": 23628.97
+  },
+  {
+    "region": "South",
+    "revenue": 22689.04
+  },
+  {
+    "region": "West",
+    "revenue": 19828.98
+  },
+  {
+    "region": "East",
+    "revenue": 19219.13
+  }
+]
