@@ -14,8 +14,8 @@ script uploads everything to your web host via SFTP — no backend required.
 - Python 3.13 or newer
 - [uv](https://docs.astral.sh/uv/) (recommended package manager) — or pip
 - A text editor
-- *(Session 2)* SFTP credentials for your web host
-- *(Final Step)* Gemini API key — get one free at [Google AI Studio](https://aistudio.google.com/app/apikey)
+- SFTP credentials for your web host
+- Gemini API key — get one free at [Google AI Studio](https://aistudio.google.com/app/apikey)
 
 ---
 
