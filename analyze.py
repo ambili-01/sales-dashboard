@@ -148,7 +148,7 @@ changes, or unusual patterns visible within this dataset. Be specific and concis
     for attempt in range(5):
         try:
             response = client.models.generate_content(
-                model="gemini-2.5-flash-lite",
+                model="gemini-3.5-flash-lite",
                 contents=prompt,
             )
             return {"insights": response.text.strip()}
