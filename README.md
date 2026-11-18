@@ -372,16 +372,34 @@ document.getElementById("ai-insights").textContent = insights.insights;
 
 ---
 
-### Step 13 — Run and verify
 
-```bash
-python analyze.py
+## Step 13 — Run and Verify
+
+Run the data analysis pipeline:
+
+```powershell
+uv run analyze.py
 ```
 
-Expected additional output line:
-```
-Wrote output/insights.json
-```
+The script generates:
+- summary.json
+- monthly_revenue.json
+- revenue_by_product.json
+- revenue_by_region.json
+- insights.json (Gemini AI-generated insights)
 
-Open `http://localhost:8000/dashboard/` — the AI Insights section should populate
-with a plain-English summary of the sales trends.
+### Live Dashboard
+
+https://ambili-01.github.io/sales-dashboard/
+
+The dashboard is hosted for free using GitHub Pages.
+
+### Gemini AI Integration
+
+The Google Gemini API generates business insights from
+sales data using Python. These insights are saved to
+insights.json and displayed on the dashboard.
+
+GitHub Pages serves the generated JSON files and does
+not call the Gemini API directly.
+les trends.
