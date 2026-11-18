@@ -160,19 +160,32 @@ function renderRegionChart(regionData) {
  */
 async function init() {
   try {
-    const [summary, insights, monthly, byProduct, byRegion] = await Promise.all([
-      loadJSON("summary.json"),
-      loadJSON("insights.json"),
-      loadJSON("monthly_revenue.json"),
-      loadJSON("revenue_by_product.json"),
-      loadJSON("revenue_by_region.json"),
-    ]);
+    const [summary, monthly, byProduct, byRegion] = await Promise.all([
+  loadJSON("summary.json"),
+  loadJSON("monthly_revenue.json"),
+  loadJSON("revenue_by_product.json"),
+  loadJSON("revenue_by_region.json"),
+]);
 
-    renderSummary(summary);
-    document.getElementById("ai-insights").textContent = insights.insights;
-    renderMonthlyChart(monthly);
-    renderProductChart(byProduct);
-    renderRegionChart(byRegion);
+renderSummary(summary);
+
+const insightsElement = document.getElementById("ai-insights");
+
+if (insightsElement) {
+  insightsElement.textContent = "AI insights will be available soon.";
+
+  loadJSON("insights.json")
+    .then((insights) => {
+      insightsElement.textContent = insights.insights;
+    })
+    .catch(() => {
+      console.info("AI insights unavailable.");
+    });
+}
+
+renderMonthlyChart(monthly);
+renderProductChart(byProduct);
+renderRegionChart(byRegion);
 
   } catch (error) {
     // Log the technical error for debugging, then show a friendly message
